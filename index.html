@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App | Using HTML, CSS and JS</title>
+    <!-- Bootstrap CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+<!-- Start Quiz Button -->
+<div class="start_btn">
+    <button id="start" type="button" class="btn btn-outline-primary btn-lg fw-bold">Start Quiz</button>
+</div>
+
+<!-- Information Box -->
+<div id="infoBox" class="card info_box d-none">
+    <h5 class="card-header">Some Rules of this Quiz</h5>
+    <div class="card-body">
+        <p class="card-text">1. You will only <span>15 seconds</span> per each question.</p>
+        <p class="card-text">2. Once you select your answer, you can't reselect.</p>
+        <p class="card-text">3. You can't select any option once time goes off.</p>
+        <p class="card-text">4. You can't exit from the Quiz while you're playing.</p>
+        <p class="card-text">5. You'll get points on the basis of your correct answer.</p>
+    </div>
+    <div class="card-footer d-flex justify-content-end">
+        <button type="button" class="btn btn-outline-danger mx-1 quit">Exit Quiz</button>
+        <button type="button" class="btn btn-success mx-1 continue">Continue</button>
+    </div>
+</div>
+
+<!-- Question Box -->
+<div id="quizBox" class="card quiz_box d-none">
+    <div class="card-header position-relative d-flex justify-content-between align-items-center">
+        <h5>Awesome Quiz Application</h5>
+        <div class="flex justify-content-center">
+            <p class="btn btn-warning time_text fw-bold">Time Left</p>
+            <span class="btn btn-dark time_sec">15</span>
+        </div>
+        <div class="time_line position-absolute"></div>
+    </div>
+    <div class="card-body">
+        <div class="card-title mb-3">
+            <!-- <h5>What does HTML stand for?</h5> -->
+        </div>
+        <div class="option_list">
+            <!--
+            <p class="card-text option">
+                <span>Hyper Text Preprocessor</span>
+                <span class="icon tick"><i class="fa-solid fa-check"></i></span>
+            </p>
+            <p class="card-text option">
+                <span>Hyper Text Markup Language</span>
+                <span class="icon cross"><i class="fa-sharp fa-solid fa-xmark"></i></span>
+            </p>
+            <p class="card-text option">
+                <span>Hyper Text Multiple Language</span>
+            </p>
+            <p class="card-text option">
+                <span>Hyper Tool Multi Language</span>
+            </p>
+            -->
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-between align-items-center">
+        <div class="total_que">
+            <!-- <p><span class="mx-1 fw-bold">2</span> of <span class="mx-1 fw-bold">5</span> Question</p>-->
+        </div>
+        <div>
+            <button id="next" type="button" class="btn btn-primary mx-1 d-none">Next Quiz</button>
+        </div>
+    </div>
+</div>
+
+<!-- Result Box -->
+<div id="resultBox" class="card result_box d-none">
+    <div class="card-body text-center">
+        <div class="vIcon text-primary">
+            <i class="fa-solid fa-crown"></i>
+        </div>
+        <h5 class="card-title my-2 fs-3">You've complete the Quiz!</h5>
+        <div class="score">
+<!--            <p>and sorry, you got only <span class="mx-1 fw-bold">2</span> out of <span class="mx-1 fw-bold">5</span></p>-->
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-between align-items-center">
+        <button type="button" class="btn btn-outline-danger mx-1 quit">Quit Quiz</button>
+        <button type="button" class="btn btn-success mx-1 restart">Reply Quiz</button>
+    </div>
+</div>
+
+<!-- Script File -->
+<!-- Font Awesome CDN Link -->
+<script src="https://kit.fontawesome.com/8446631d3f.js" crossorigin="anonymous"></script>
+<!-- Bootstrap CDN Link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<!-- JS File Link -->
+<script src="./assets/questions.js"></script>
+<script src="./assets/main.js"></script>
+</body>
+</html>

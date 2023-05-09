@@ -1,0 +1,96 @@
+/********** Basic **********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+p, h5 {
+    margin-bottom: 0;
+}
+
+.start_btn,
+.quiz_box,
+.result_box,
+.info_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    transition: all .3s ease;
+}
+
+.quiz_box,
+.info_box,
+.result_box {
+    width: 550px;
+}
+
+.quiz_box .card-header .time_line {
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: #007BFF;
+}
+
+.quiz_box .option_list .option {
+    background: #F0F8FFFF;
+    border: 1px solid #84C5FE;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.quiz_box .option_list .option:hover {
+    color: #004085;
+    background: #CCE5FF;
+    border-color: #B8DAFF;
+}
+
+.quiz_box .option_list .option .icon {
+    height: 24px;
+    width: 24px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    pointer-events: none;
+}
+
+.quiz_box .option_list .option .icon.tick {
+    color: #23903C;
+    border-color: #23903C;
+    background: #D4EDDA;
+}
+
+.quiz_box .option_list .option .icon.cross {
+    color: #A4283A;
+    border-color: #A4283A;
+    background: #F8D7DA;
+}
+
+.quiz_box .option_list .option.correct {
+    color: #155724;
+    border-color: #D4EDDA;
+    background: #C3E6CB;
+}
+
+.quiz_box .option_list .option.inCorrect {
+    color: #721C24;
+    border-color: #F8D7DA;
+    background: #F5C6CB;
+}
+
+.quiz_box .option_list .option.disabled {
+    pointer-events: none;
+}
+
+.vIcon {
+    font-size: 100px;
+}
