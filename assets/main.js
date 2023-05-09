@@ -42,7 +42,7 @@ let userScore = 0;
 
 const nextBtn = document.getElementById('next');
 const resultBox = document.querySelector('#resultBox');
-const restartQuiz = resultBox.querySelector('.restart');
+// const restartQuiz = resultBox.querySelector('.restart');
 const quitQuiz = resultBox.querySelector('.quit');
 
 // IF Next Button Clicked
@@ -72,23 +72,23 @@ quitQuiz.addEventListener('click', (e) => {
 });
 
 // IF Replay Button Clicked
-restartQuiz.addEventListener('click', (e) => {
-   e.preventDefault();
-    quizBox.classList.remove('d-none'); // Show the Quiz Box
-    resultBox.classList.add('d-none'); // Hide the Result Box
-    let questionCount = 0;
-    let questionNumber = 1;
-    let timeValue = 15;
-    let widthValue = 0;
-    // let userScore = 0;
-    showQuestions(questionCount);
-    questionCounter(questionNumber);
-    clearInterval(counter);
-    startTimer(timeValue);
-    clearInterval(counterLine);
-    startTimerLine(widthValue);
-    nextBtn.classList.add('d-none');
-});
+// restartQuiz.addEventListener('click', (e) => {
+//    e.preventDefault();
+//     quizBox.classList.remove('d-none'); // Show the Quiz Box
+//     resultBox.classList.add('d-none'); // Hide the Result Box
+//     let questionCount = 0;
+//     let questionNumber = 1;
+//     let timeValue = 15;
+//     let widthValue = 0;
+//     let userScore = 0;
+//     showQuestions(questionCount);
+//     questionCounter(questionNumber);
+//     clearInterval(counter);
+//     startTimer(timeValue);
+//     clearInterval(counterLine);
+//     startTimerLine(widthValue);
+//     nextBtn.classList.add('d-none');
+// });
 
 
 // Getting questions and options from array
